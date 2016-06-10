@@ -9,7 +9,7 @@
 	"author": "dragon",
 	"license": "ISC",
 	"devDependencies": {
+		"json-loader": "^0.5.4"
 	},
-	"dependencies": {
-	}
+	"dependencies": {}
 }
