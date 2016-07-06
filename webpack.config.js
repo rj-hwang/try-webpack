@@ -1,8 +1,8 @@
 module.exports = {
-	entry: './src/app.js',	// required './'
+	entry: "./src/app.js",
 	output: {
-		path: './bin',
-		filename: 'app.bundle.js'
+		//path: './bin',
+		filename: 'bundle.js'
 	},
 	module: {
 		loaders: [
