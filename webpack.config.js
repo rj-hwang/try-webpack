@@ -1,21 +1,13 @@
+var webpack = require("webpack");
 module.exports = {
-	entry: './src/app.js',	// required './'
-	output: {
-		path: './bin',
-		filename: 'app.bundle.js'
+	entry: {
+		app: "./src/app.js",
+		vendor: ["./src/cats.js", "./src/cats.json"],
 	},
-	module: {
-		loaders: [
-			{
-				test: /\.json$/,
-				exclude: /node_modules/,
-				loader: 'json-loader'
-			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader'
-			}
-		]
-	}
+	output: {
+		filename: "./bin/bundle.js"
+	},
+	plugins: [
+		new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"./bin/vendor.bundle.js")
+	]
 };
