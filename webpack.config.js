@@ -6,7 +6,7 @@ module.exports = {
 	output: {
 		path: './bin',
 		filename: '[name].js',
-		chunkFilename: "chunk.[id].js", //chunkFilename是非主入口的文件名，默认为 "[id].[filename].js"
+		chunkFilename: "chunk.[id].[name].js", //chunkFilename是非主入口的文件名，默认为 "[id].[filename].js"
 		publicPath: './bin/'
 	},
 	module: {
